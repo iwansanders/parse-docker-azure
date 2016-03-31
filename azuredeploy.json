@@ -177,6 +177,20 @@
             }
           },
           {
+            "name": "mongodb",
+            "properties": {
+              "description": "Allow mongodb",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "27017",
+              "sourceAddressPrefix": "Internet",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 100,
+              "direction": "Inbound"
+            }
+          },
+          {
             "name": "ssh",
             "properties": {
               "description": "Allow SSH",
@@ -259,9 +273,10 @@
         "settings": {
           "compose": {
             "parse": {
-              "image": "felixrieseberg/parse",
+              "image": "iwansanders/parse-mongodb-docker",
               "ports": [
-                "8080:80"
+                "8080:80",
+                "27017:27017"
               ],
               "restart": "always"
             }
