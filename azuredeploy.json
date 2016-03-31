@@ -21,19 +21,19 @@
       }
     },
     "parseAppId": {
-      "type": "securestring",
+      "type": "string",
       "metadata": {
         "description": "The application id to host with this server instance."
       }
     },
     "parseMasterKey": {
-      "type": "securestring",
+      "type": "string",
       "metadata": {
         "description": "The master key to use for overriding ACL security."
       }
     },
     "parseFileKey": {
-      "type": "securestring",
+      "type": "string",
       "metadata": {
         "description": "For migrated apps, this is necessary to provide access to files already hosted on Parse."
       }
